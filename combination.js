@@ -11,6 +11,7 @@ if(fs.existsSync(destPath) == false){
 	exec("git pull", {cwd: './phoenix-core/src/app/prod/SA-feature/'});
 }
 exec("git checkout develop", {cwd:'./phoenix-core/src/app/beta/SA-feature/'});
+exec("git pull", {cwd: './phoenix-core/src/app/beta/SA-feature/'});
 exec("ng s --o",{cwd: '../phoenix-core/phoenix-core/'} , function(err,stdout,stderr){
 	if(err) {
 		console.log('error:'+stderr);
