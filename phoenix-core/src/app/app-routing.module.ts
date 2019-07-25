@@ -5,13 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: 'beta',
-    loadChildren: () => import('./module/security-advisor-beta/security-advisor-beta.module').then(mod =>
-      mod.SecurityAdvisorBetaModule)
+    loadChildren: () => import('./core/beta/beta.module').then(mod =>
+      mod.BetaModule)
   },
   {
     path: 'prod',
-    loadChildren: () => import('./module/security-advisor/security-advisor.module').then(mod =>
-      mod.SecurityAdvisorModule)
+    loadChildren: () => import('./core/prod/prod.module').then(mod =>
+      mod.ProdModule)
   }
 ];
 
