@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PhenixBetaComponent } from './phenix-beta.component';
 import { CommonModule } from '@angular/common';
+import { PhenixBetaRoutingModule } from './phenix-beta-routing.module';
 
 
 
@@ -8,6 +9,7 @@ import { CommonModule } from '@angular/common';
   declarations: [PhenixBetaComponent],
   imports: [
     CommonModule,
+    PhenixBetaRoutingModule
   ],
   exports: [PhenixBetaComponent]
 })
