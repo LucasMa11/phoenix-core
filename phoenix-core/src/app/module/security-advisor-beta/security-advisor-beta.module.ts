@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SecurityAdvisorComponent } from '../../beta/SA-feature/security-advisor/security-advisor.component';
+import { PhenixBetaModule } from 'phenix-beta';
+import { PhenixBetaComponent } from 'projects/phenix-beta/src/public-api';
 import { SecurityAdvisorBetaRoutingModule } from './security-advisor-beta-routing.module';
 
 
 @NgModule({
-  declarations: [
-    SecurityAdvisorComponent
-  ],
+  declarations: [PhenixBetaComponent],
   imports: [
     CommonModule,
-    SecurityAdvisorBetaRoutingModule
+    SecurityAdvisorBetaRoutingModule,
+    PhenixBetaModule
   ]
 })
 export class SecurityAdvisorBetaModule { }

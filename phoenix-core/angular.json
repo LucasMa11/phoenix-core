@@ -115,6 +115,41 @@
           }
         }
       }
+    },
+    "phenix-beta": {
+      "projectType": "library",
+      "root": "projects/phenix-beta",
+      "sourceRoot": "projects/phenix-beta/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/phenix-beta/tsconfig.lib.json",
+            "project": "projects/phenix-beta/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/phenix-beta/src/test.ts",
+            "tsConfig": "projects/phenix-beta/tsconfig.spec.json",
+            "karmaConfig": "projects/phenix-beta/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/phenix-beta/tsconfig.lib.json",
+              "projects/phenix-beta/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "phoenix-core"
 }

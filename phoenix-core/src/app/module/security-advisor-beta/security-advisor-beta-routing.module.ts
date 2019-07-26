@@ -1,14 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SecurityAdvisorComponent } from 'src/app/beta/SA-feature/security-advisor/security-advisor.component';
+import { PhenixBetaComponent } from 'phenix-beta';
 
 
-const routes: Routes = [
-  {
-    path: '',
-    component: SecurityAdvisorComponent
-  }
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
